@@ -4,7 +4,7 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
 
 <img src="https://labs.alta3.com/courses/sd-wan/images/vxlan/Slide1.PNG" alt="vxlan" width="50%" >"
 
-0. Add namespaces
+1. Add namespaces
 
     `sudo ip netns add peach`  
     `sudo ip netns add bowser`  
