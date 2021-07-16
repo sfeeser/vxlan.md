@@ -29,6 +29,11 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
     `sudo ip link set vxlan10 master br-vxlan10`  
     `sudo ip link set vxlan20 master br-vxlan20`   
 
+0.  Plug in the veths
+
+    `sudo ip link set bowser2net netns bowser`  
+    `sudo ip link set peach2net  netns peach`
+
 0. Bring up the interfaces
  
     `sudo ip link set vxlan10 up`  
@@ -39,11 +44,6 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
     `sudo ip netns bowser exec ip link set dev bowser2net up`  
     `sudo ip netns peach  exec ip link set dev lo up`  
     `sudo ip netns bowser exec ip link set dev lo up`      
-
-0.  Plug in the veths
-
-    `sudo ip link set bowser2net netns bowser`  
-    `sudo ip link set peach2net  netns peach`
 
 0. Add IP addresses to veths
 
