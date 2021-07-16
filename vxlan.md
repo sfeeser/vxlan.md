@@ -47,6 +47,6 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
     
 0. Add IP addresses to veths
 
-   `sudo ip netns exec peach ip a add 10.64.0.1/24 dev peach2net`  
-   `sudo ip netns exec peach ip a add 10.64.0.2/24 dev bowser2net`  
+   `sudo ip netns exec peach ip a add 10.64.2.2/24 dev peach2net`  
+   `sudo ip netns exec peach ip a add 10.64.2.3/24 dev bowser2net`  
 
