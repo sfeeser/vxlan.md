@@ -4,11 +4,18 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
 
 <img src="https://labs.alta3.com/courses/sd-wan/images/vxlan/Slide1.PNG" alt="vxlan" width="50%" >"
 
-1. sudo ip netns add peach
+0. Add namespaces
 
-0. sudo ip netns add bowser
+    `sudo ip netns add peach`  
+    `sudo ip netns add bowser`  
 
-0. sudo ovs-vsctl add-port br-vxlan10 peach -- set interface peach type=internal
+0. Create Bridges
+
+    `sudo ip link add br-vxlan10 type bridge`  
+    `sudo ip link add br-vxlan20 type bridge`
+    
+    
+2. sudo ovs-vsctl add-port br-vxlan10 peach -- set interface peach type=internal
 
 0. sudo ovs-vsctl add-port br-vxlan20 bowser -- set interface bowser type=internal
 
@@ -18,7 +25,7 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
     
 0. Create a linux bridge    
 
-    `sudo ip link add br-vxlan10 type bridge`
+
 
 0. Attach the vxlan interface to the linux bridge
 
