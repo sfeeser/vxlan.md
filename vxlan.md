@@ -1,4 +1,4 @@
-# vxlan 
+# VXLAN
 
 Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, distributed using IGMP.
 
