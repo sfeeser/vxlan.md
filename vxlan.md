@@ -52,7 +52,7 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
    
 0. Set the MTU
  
-    `sudo ip netns exec peach  ip link set dev peach2net mtu 1450`
+    `sudo ip netns exec peach  ip link set dev peach2net mtu 1450`  
     `sudo ip netns exec bowser ip link set dev bowser2net mtu 1450`
 
 0. Check out what has been installed
