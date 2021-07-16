@@ -2,7 +2,10 @@
 
 Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, distributed using IGMP.
 
-0. Create a vxlan interface
+<img src="https://labs.alta3.com/courses/sd-wan/images/vxlan/Slide1.PNG" alt="vxlan" width="50%" >"
+
+
+1. Create a vxlan interface
 
     `ip link add vxlan10 type vxlan id 10 group 239.1.1.1 dstport 0 dev ens3`
     
