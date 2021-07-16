@@ -31,10 +31,10 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
 
 0. Bring up the interfaces
  
-    `sudo ip link set vxlan10 up`
-    `sudo ip link set vxlan20 up`
-    `sudo ip link set br-vxlan10 up`
-    `sudo ip link set br-vxlan20 up`   
+    `sudo ip link set vxlan10 up`  
+    `sudo ip link set vxlan20 up`  
+    `sudo ip link set br-vxlan10 up`  
+    `sudo ip link set br-vxlan20 up`  
 
 0.  Plug in the veths
 
