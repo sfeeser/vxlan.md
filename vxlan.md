@@ -21,7 +21,7 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
 
 0. Create a vxlan interface
 
-    `sudo ip link add vxlan10 type vxlan id 10 group 239.1.1.1 dstport 0 dev ens3`
+    `sudo ip link add vxlan10 type vxlan id 10 group 239.1.1.1 dstport 0 dev ens3`  
     `sudo ip link add vxlan20 type vxlan id 20 group 239.1.1.1 dstport 0 dev ens3`
  
 0. Attach the vxlan interface to the linux bridge
