@@ -49,6 +49,8 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
 
    `sudo ip netns exec peach  ip a add 10.64.2.2/24 dev peach2net`  
    `sudo ip netns exec bowser ip a add 10.64.2.3/24 dev bowser2net` 
+   `sudo ip link set dev net2peach master br-vxlan10`  
+   `sudo ip link set dev net2bowser master br-vxlan20`  
    
 0. Set the MTU
  
