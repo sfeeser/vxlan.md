@@ -13,47 +13,30 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
 
     `sudo ip link add br-vxlan10 type bridge`  
     `sudo ip link add br-vxlan20 type bridge`
-    
-    
-2. sudo ovs-vsctl add-port br-vxlan10 peach -- set interface peach type=internal
 
-0. sudo ovs-vsctl add-port br-vxlan20 bowser -- set interface bowser type=internal
+0. Create the veths
+
+    `sudo ip add link add net2peach  type veth peer name peach2net`  
+    `sudo ip add link add net2bowser type veth peer name bowser2net`  
 
 0. Create a vxlan interface
 
     `sudo ip link add vxlan10 type vxlan id 10 group 239.1.1.1 dstport 0 dev ens3`
-    
-0. Create a linux bridge    
-
-
-
+    `sudo ip link add vxlan20 type vxlan id 20 group 239.1.1.1 dstport 0 dev ens3`
+ 
 0. Attach the vxlan interface to the linux bridge
 
-    `sudo ip link set vxlan10 master br-vxlan10`
-    
+    `sudo ip link set vxlan10 master br-vxlan10`  
+    `sudo ip link set vxlan20 master br-vxlan20`   
+
 0. Bring up the interfaces
  
     `sudo ip link set vxlan10 up`
-    
-    `sudo ip link set br-vxlan10 up`
-    
-
-0. **Now let's create a target vxlan bridge**
-
-0. Create a vxlan interface
-
-    `sudo ip link add vxlan20 type vxlan id 20 group 239.1.1.1 dstport 0 dev ens3`
-
-0. Create a brdige
-
-    `sudo ip link add br-vxlan20 type bridge`
-    
-0. Attach the vxlan interface to the linux bridge
-
-    `sudo ip link set vxlan20 master br-vxlan20`
-
-0. Bring up the vxlan interfaces
-    
     `sudo ip link set vxlan20 up`
+    `sudo ip link set br-vxlan10 up`
+    `sudo ip link set br-vxlan20 up`   
+
     
-    `sudo ip link set br-vxlan20 up`
+
+    
+
