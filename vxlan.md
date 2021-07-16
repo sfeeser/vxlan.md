@@ -16,8 +16,8 @@ Linux bridge vxlan discovers other vxlan bridges using multicast UDP messages, d
 
 0. Create the veths
 
-    `sudo ip add link add net2peach  type veth peer name peach2net`  
-    `sudo ip add link add net2bowser type veth peer name bowser2net`  
+    `sudo ip link add net2peach  type veth peer name peach2net`  
+    `sudo ip link add net2bowser type veth peer name bowser2net`  
 
 0. Create a vxlan interface
 
